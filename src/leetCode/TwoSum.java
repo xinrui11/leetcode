@@ -12,6 +12,12 @@ import java.util.Map;
  * 2017-06-29
  */
 public class TwoSum {
+    /**
+     * 需要记录下自己的思路
+     * @param nums
+     * @param target
+     * @return
+     */
     public int[] twoSumMySolution(int[] nums, int target) {
         int[] result = new int[2];//题目假定只有一组满足的数
         for (int i = 0; i < nums.length; i++) {
