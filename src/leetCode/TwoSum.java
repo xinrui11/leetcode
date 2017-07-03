@@ -19,39 +19,35 @@ import java.util.Map;
  */
 public class TwoSum {
     /**
-     * 需要记录下自己的思路
+     * 暴力循环两遍，时间复杂度n的平方，空间复杂度1
      * @param nums Given array
      * @param target specific target
      * @return int[]
      */
     public int[] twoSumMySolution(int[] nums, int target) {
-        int[] result = new int[2];//题目假定只有一组满足的数
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if ((nums[i] + nums[j]) == target) {
-                    result[0] = i;
-                    result[1] = j;
-                    break;
+                    return new int[]{i,j};
                 }
             }
         }
-        return result;
+        throw new IllegalArgumentException("无解");
     }
 
     /**
+     * 官方最优解法，说是只循环了一遍，但是使用了map，调用map的containsKey方法不也是循环吗
      * It only go through the list once.
      */
-    public int[] twoSumFast(int[] numbers, int target) {
-        int[] result = new int[2];
+    public int[] twoSumFast(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < numbers.length; i++) {
-            if (map.containsKey(target - numbers[i])) {
-                result[1] = i + 1;
-                result[0] = map.get(target - numbers[i]);
-                return result;
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i };
             }
-            map.put(numbers[i], i + 1);
+            map.put(nums[i], i);
         }
-        return result;
+        throw new IllegalArgumentException("No two sum solution");
     }
 }
