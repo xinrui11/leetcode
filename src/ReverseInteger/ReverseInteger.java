@@ -1,4 +1,4 @@
-package leetCode;
+package ReverseInteger;
 
 /**
  * Reverse digits of an integer.

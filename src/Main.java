@@ -1,4 +1,4 @@
-import leetCode.ReverseInteger;
+import ReverseInteger.ReverseInteger;
 
 import java.util.Date;
 
