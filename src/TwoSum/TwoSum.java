@@ -40,14 +40,15 @@ public class TwoSum {
      * It only go through the list once.
      */
     public int[] twoSumFast(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i = 0; i < nums.length ; i++){
+            Integer diff = target - nums[i];
+            if(map.containsKey(diff)){
+                return new int[]{map.get(diff),i};
+            } else {
+                map.put(nums[i],i);//这里把值放在key里，以便后边使用getkey方法获取value
             }
-            map.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution");
+        throw new IllegalArgumentException("无解");
     }
 }

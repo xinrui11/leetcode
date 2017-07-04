@@ -27,7 +27,7 @@ public class ReverseInteger {
      */
     public int reverse(int x) {
         String s = String.valueOf(x);
-        String re = new String();///1
+        String re = new String();
         for (int i = s.length() - 1; i >= 0; i--) {
             if (s.charAt(i) == '-') {
                 re = "-" + re;
