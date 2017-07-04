@@ -7,5 +7,6 @@ record my answers from leetcode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|1|[Two Sum](https://leetcode.com/problems/two-su) | [java](./leetCode/TwoSum.java)|Easy|
+|1|[Two Sum](https://leetcode.com/problems/two-su) | [java](./src/leetCode/TwoSum.java)|Easy|
+|7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/#/description) | [java](./src/leetCode/ReverseInteger.java)|Easy|
 
