@@ -9,4 +9,5 @@ record my answers from leetcode
 |---| ----- | -------- | ---------- |---|
 |1|[Two Sum](https://leetcode.com/problems/two-su) | [java](./src/TwoSum/TwoSum.java)|Easy|2017-06-30|
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/#/description) | [java](./src/ReverseInteger/ReverseInteger.java)|Easy|2017-07-02|
+|2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [java](./src/AddTwoNumbers/AddTwoNumbers.java)|Medium|2017-07-04|
 
