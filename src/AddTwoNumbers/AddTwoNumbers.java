@@ -5,6 +5,8 @@ public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result;
         int count = 0;
+        //这里必须对第一次拿在循环外面，否则reault没有进行实例化，无法进行地址绑定，
+        //官方解法巧妙的避开了这一点，将reault默认实例化为0，而最后返回的数据为reault.next
         if(l1.val + l2.val + count >= 10){
             result = new ListNode(l1.val + l2.val + count - 10);
             count = 1;
@@ -31,6 +33,23 @@ public class AddTwoNumbers {
         return result;
     }
 
+    //看了官方解法后优化的版本
+    public ListNode addTwoNumbersOptimize(ListNode l1, ListNode l2) {
+        ListNode result = new ListNode(0);
+        int count = 0;
+        ListNode tail = result;
+        while(l1 != null || l2 != null || count != 0){
+            l1 = l1 != null ? l1:new ListNode(0);
+            l2 = l2 != null ? l2:new ListNode(0);
+            tail.next = new ListNode((l1.val + l2.val + count) % 10);
+            count = l1.val + l2.val + count >= 10 ? 1 : 0;
+            tail = tail.next;
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+        return result.next;
+    }
+
     //单链表倒转
     public ListNode reverse(ListNode head){
         ListNode p1,p2 = null;//p1记录头信息，p2作为返回值
@@ -45,7 +64,7 @@ public class AddTwoNumbers {
     }
 
     /**
-     * 官方揭发
+     * 官方解法
      */
     public ListNode addTwoNumbersOfficial(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
@@ -61,16 +80,17 @@ public class AddTwoNumbers {
             if (p != null) p = p.next;
             if (q != null) q = q.next;
         }
-        if (carry > 0) {
+        if (carry > 0) {//如果加完之后carry还大于0则需进一位
             curr.next = new ListNode(carry);
         }
-        return dummyHead.next;
+        return dummyHead.next;//注意这里返回的是next
     }
 
     /**
-     * 最高用户票数
+     * 最高用户票数解法
+     * 与官方解法思路类似
      */
-    public ListNode addTwoNumbersMostVoted(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbersHighestVoted(ListNode l1, ListNode l2) {
         ListNode c1 = l1;
         ListNode c2 = l2;
         ListNode sentinel = new ListNode(0);

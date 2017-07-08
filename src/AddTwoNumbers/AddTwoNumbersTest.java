@@ -38,6 +38,22 @@ public class AddTwoNumbersTest extends TestCase {
         outMessage(a.addTwoNumbers(p1,p2));
     }
 
+    @Test
+    public void testAddTwoNumbersOptimize() throws Exception {
+        AddTwoNumbers a = new AddTwoNumbers();
+        ListNode p1, p2;
+        p1 = p2 = new ListNode(0);
+        for(int i=1; i<6; i++){
+            ListNode p = new ListNode(i);
+            p1.next = p;
+            p1 = p;
+        }
+        p1 = p2;
+        outMessage(p1);
+        outMessage(p2);
+        outMessage(a.addTwoNumbersOptimize(p1,p2));
+    }
+
     private void outMessage(ListNode l){
         while(l != null){
             System.out.print(l.val+"  ");
