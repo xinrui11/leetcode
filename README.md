@@ -1,9 +1,11 @@
 # leetcode
--English
-record my answers from leetcode
 
--Chinese
-记录自己在leetcode上问题的思路及解答
+-English  
+record my answers of leetcode's questions
+
+-Chinese  
+记录自己在leetcode上问题的思路及解答  
+
 
 | # | Title | Solution | Difficulty |Solve Time|
 |---| ----- | -------- | ---------- |---|
