@@ -1,7 +1,7 @@
 # leetcode
 
 -English  
-record my answers of leetcode's questions
+record my answers to leetcode's questions
 
 -Chinese  
 记录自己在leetcode上问题的思路及解答  
