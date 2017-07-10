@@ -13,6 +13,20 @@ package LongestSubstringWithoutRepeatingCharacters;
  */
 public class LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
-        return 0;
+        int answer = 0;
+        String temp = "";
+        for(int i = 0; i < s.length(); i++){
+            int j = i;
+            int length = 1;
+            temp = s.substring(i, i + length);
+            while(j + 1 < s.length() && !temp.contains(s.substring(j + 1, j + 2))){
+                j++; length++;
+                temp = s.substring(i, i + length);
+            }
+            if(answer < temp.length()){
+                answer = temp.length();
+            }
+        }
+        return answer;
     }
 }
