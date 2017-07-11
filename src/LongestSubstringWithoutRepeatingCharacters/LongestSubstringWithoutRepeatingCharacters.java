@@ -15,13 +15,13 @@ public class LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
         int answer = 0;
         String temp = "";
+        int start, end = 1;
         for(int i = 0; i < s.length(); i++){
-            int j = i;
-            int length = 1;
-            temp = s.substring(i, i + length);
-            while(j + 1 < s.length() && !temp.contains(s.substring(j + 1, j + 2))){
-                j++; length++;
-                temp = s.substring(i, i + length);
+            start = i;
+            temp = s.substring(start, end);
+            while(end + 1 <= s.length() && !temp.contains(s.substring(end, end + 1))){
+                end++;
+                temp = s.substring(start, end);
             }
             if(answer < temp.length()){
                 answer = temp.length();
