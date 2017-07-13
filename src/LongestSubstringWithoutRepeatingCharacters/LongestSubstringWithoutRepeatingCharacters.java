@@ -76,7 +76,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     //int[256] for Extended ASCII
     public int lengthOfLongestSubstring4(String s) {
         int n = s.length(), ans = 0;
-        int[] index = new int[128]; // current index of character
+        int[] index = new int[128]; // current index of character，代替上个方法中的map，别的思路一致
         // try to extend the range [i, j]
         for (int j = 0, i = 0; j < n; j++) {
             i = Math.max(index[s.charAt(j)], i);
