@@ -14,6 +14,12 @@ public class ZigZagConversion {
      convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
      */
     public class Solution {
+        /**
+         * Z形排序
+         * @param s 源字符串
+         * @param numRows 行数
+         * @return 排序后的字符串
+         */
         public String convert(String s, int numRows) {
             return s;
         }
