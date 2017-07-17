@@ -15,4 +15,5 @@ record my answers to leetcode's questions
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters) | [java](./src/LongestSubstringWithoutRepeatingCharacters/LongestSubstringWithoutRepeatingCharacters.java)|Medium|2017-07-10|
 |6|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [java](./src/ZigZagConversion/ZigZagConversion.java)|Medium|2017-07-13|
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [java](./src/LongestPalindromicSubstring/LongestPalindromicSubstring.java)|Medium|2017-07-15|
+|9|[Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [java](./src/PalindromeNumber/PalindromeNumber.java)|Easy|2017-07-17|
 
