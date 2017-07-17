@@ -3,7 +3,7 @@
 -English  
 record my answers to leetcode's questions
 
--Chinese  
+-中文  
 记录自己在leetcode上问题的思路及解答  
 
 
