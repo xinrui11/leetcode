@@ -13,15 +13,24 @@ public class ZigZagConversion {
      string convert(string text, int nRows);
      convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
      */
-    public class Solution {
-        /**
-         * Z形排序
-         * @param s 源字符串
-         * @param numRows 行数
-         * @return 排序后的字符串
-         */
-        public String convert(String s, int numRows) {
-            return s;
+    public String convert(String s, int numRows) {
+        int[][] result = new int[numRows][s.length()];
+        int space = numRows * 2 - 3;
+        for (int i = 0; i < s.length();) {
+            for (int j = 0; j < numRows; j++,i++) {
+                result[j]
+            }
         }
+        for (int i = 0; i < numRows; i++) {
+            if(i >= numRows / 2){
+                space = space + ((i - (numRows / 2)) * 2);
+            } else {
+                space = space - (i * 2);
+            }
+            for (int j = i; j < s.length(); j=+space) {
+                result = result + s.charAt(j)+ ;
+            }
+        }
+        return result;
     }
 }
