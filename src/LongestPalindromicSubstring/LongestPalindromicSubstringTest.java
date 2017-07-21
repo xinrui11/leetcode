@@ -9,10 +9,10 @@ public class LongestPalindromicSubstringTest extends TestCase {
         LongestPalindromicSubstring l = new LongestPalindromicSubstring();
         String input = "asdfgfdsaaaa";
         System.out.println("input is:" + input);
-        System.out.println("out is:" + l.longestPalindrome4(input));
-        input = "ccc";
+        System.out.println("out is:" + l.longestPalindrome5(input));
+        input = "c";
         System.out.println("input is:" + input);
-        System.out.println("out is:" + l.longestPalindrome4(input));
+        System.out.println("out is:" + l.longestPalindrome5(input));
     }
 
 }
