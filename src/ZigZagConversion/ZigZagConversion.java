@@ -46,4 +46,25 @@ public class ZigZagConversion {
         }
         return re;
     }
+
+    //总体思路和我的基本一致，但是处理的比我巧妙，一次循环一个V行，使用StringBuilder数组，都是比我巧妙的地方
+    public String convertHighestVoted(String s, int numRows) {
+        StringBuilder[] sb = new StringBuilder[numRows];
+        for (int i = 0; i < sb.length; i++) {
+            //必要的初始化，否则下面使用时要判断是否实例化，和上面我的算法一样
+            sb[i] = new StringBuilder();
+        }
+        int i = 0;
+        while (i < s.length()){
+            //下面一定要判断i < s.length()
+            for(int index = 0;index < numRows && i < s.length(); index++)
+                sb[index].append(s.charAt(i++));
+            for (int index = numRows - 2; index > 0 && i < s.length(); index--)
+                sb[index].append(s.charAt(i++));
+        }
+        for (int j = 1; j < sb.length; j++) {
+            sb[0].append(sb[j]);
+        }
+        return sb[0].toString();
+    }
 }

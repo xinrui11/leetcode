@@ -148,7 +148,7 @@ public class LongestPalindromicSubstring {
     public String longestPalindrome5(String s) {
         String formats = "%#";
         for (int i = 0; i < s.length(); i++) {
-            //格式化字符串，字符串中间全部加#，处理单双数问题，首加上%防止越界，末尾自带/n所以不用加
+            //格式化字符串，字符串中间全部加#，处理单双数问题，首加上%防止越界，末尾自带\0所以不用加
             formats = formats + s.charAt(i) + "#";
         }
         formats = formats + "$";//java末尾不带\0，需要自己加一个不同的字段
