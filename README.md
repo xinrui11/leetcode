@@ -16,4 +16,5 @@ record my answers to leetcode's questions
 |6|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/) | [java](./src/ZigZagConversion/ZigZagConversion.java)|Medium|2017-07-13|
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | [java](./src/LongestPalindromicSubstring/LongestPalindromicSubstring.java)|Medium|2017-07-15|
 |9|[Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [java](./src/PalindromeNumber/PalindromeNumber.java)|Easy|2017-07-17|
+|8|[String to Integer(atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | [java](./src/StringToInteger/StringToInteger.java)|Medium|2017-07-24|
 
