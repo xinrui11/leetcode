@@ -55,9 +55,7 @@ public class ThreeSum {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < nums.length - 2; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) {            // skip same result
-                continue;
-            }
+            if (i > 0 && nums[i] == nums[i - 1])continue;// skip same result
             int second = i + 1,third = nums.length - 1;
             int target = -nums[i];
             while(second < third){
