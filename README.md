@@ -25,4 +25,5 @@ record my answers to leetcode's questions
 |15|[3Sum](https://leetcode.com/problems/3sum/) | [java](./src/ThreeSum/ThreeSum.java)|Medium|2017-07-26|
 |16|[3Sum Closest](https://leetcode.com/problems/3sum-closest/) | [java](./src/ThreeSum/ThreeSum.java)|Medium|2017-07-27|
 |17|[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [java](./src/LetterCombinationsofaPhoneNumber/LetterCombinationsofaPhoneNumber.java)|Medium|2017-07-27|
+|18|[4sum](https://leetcode.com/problems/4sum/) | [java](./src/FourSum/FourSum.java)|Medium|2017-07-28|
 
