@@ -1,9 +1,6 @@
 package LetterCombinationsofaPhoneNumber;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  Given a digit string, return all possible letter combinations that the number could represent.
@@ -17,6 +14,7 @@ import java.util.Map;
  */
 
 public class LetterCombinationsofaPhoneNumber {
+    //this is my solution
     public List<String> letterCombinations(String digits) {
         if(digits == null || digits.length() == 0){
             return new ArrayList<>();
@@ -49,29 +47,67 @@ public class LetterCombinationsofaPhoneNumber {
             if(i == 0){
                 for(int j = 0; j<level; j++){
                     for(int k = 0; k < loopCount; k++){
-                        String t = selected.get(i)[j];
                         res.add(selected.get(i)[j]);
                     }
                 }
             }
             else{
-                /*for(int p = 0;p < counts; p++){
+                int p = 0;
+                while(p < allCounts){
                     for(int j = 0; j<level; j++){
-                        for(int k = loopCount * j; k < loopCount * (j+1);k++){
-                            res.set(k,res.get(k)+selected.get(i)[j]);
+                        for(int k = 0; k < loopCount; k++){
+                            res.set(p,res.get(p)+selected.get(i)[j]);
+                            p++;
                         }
                     }
-                }*/
-                int j = 0;
-                for(int p = 0;p < allCounts;p++){
-                    if(p % loopCount == 0){
-                        j++;
-                    }
-                    res.set(p,res.get(p)+selected.get(i)[j]);
                 }
             }
         }
         return res;
     }
+
+    //this solution is amazing,using FIFO queue
+    public List<String> letterCombinations2(String digits) {
+        LinkedList<String> res = new LinkedList<>();
+        if(digits == null || digits.length() <= 0){
+            return res;
+        }
+        res.add("");
+        for(int i = 0; i < digits.length(); i++){
+            while(res.peek().length() == i){
+                String p = res.remove();
+                int index = digits.charAt(i) - '0';
+                for(int j = 0;j < KEYS[index].length(); j++){
+                    res.add(p+KEYS[index].charAt(j));
+                }
+                /*for(char s : KEYS[index].toCharArray()){
+                    res.add(p+s);
+                }*/
+            }
+        }
+        return res;
+    }
+
+    //recursive solution
+    private static final String[] KEYS = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+
+    public List<String> letterCombinations3(String digits) {
+        List<String> res = new ArrayList<>();
+        combination("", digits, 0, res);
+        return res;
+    }
+
+    private void combination(String prefix, String digits, int count, List<String> res){
+        if(count >= digits.length()){
+            res.add(prefix);
+            return;
+        }
+        int index = digits.charAt(count) - '0';
+//        count++;//It's same.
+        for(int i = 0; i < KEYS[index].length(); i++){
+            combination(prefix + KEYS[index].charAt(i), digits, count + 1, res);
+        }
+    }
+
 
 }
