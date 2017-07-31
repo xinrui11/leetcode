@@ -27,4 +27,5 @@ record my answers to leetcode's questions
 |17|[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [java](./src/LetterCombinationsofaPhoneNumber/LetterCombinationsofaPhoneNumber.java)|Medium|2017-07-27|
 |18|[4sum](https://leetcode.com/problems/4sum/) | [java](./src/FourSum/FourSum.java)|Medium|2017-07-28|
 |19|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [java](./src/RemoveNthNodeFromEndofList/RemoveNthNodeFromEndofList.java)|Medium|2017-07-29|
+|20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [java](./src/ValidParentheses/ValidParentheses.java)|Easy|2017-07-29|
 
