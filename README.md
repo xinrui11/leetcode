@@ -30,4 +30,5 @@ record my answers to leetcode's questions
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | [java](./src/ValidParentheses/ValidParentheses.java)|Easy|2017-07-29|
 |21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [java](./src/MergeTwoSortedLists/MergeTwoSortedLists.java)|Easy|2017-07-31|
 |22|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [java](./src/GenerateParentheses/GenerateParentheses.java)|Medium|2017-07-31|
+|23|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [java](./src/MergekSortedLists/MergekSortedLists.java)|Hard|2017-08-01|
 
