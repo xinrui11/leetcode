@@ -1,11 +1,8 @@
 package MergekSortedLists;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-
-import static java.util.Arrays.asList;
 
 /**
  * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
@@ -49,14 +46,14 @@ public class MergekSortedLists {
     }
 
     //my solution after optimize
-    public ListNode mergeKListsOptimize(ListNode[] lists) {
+    /*public ListNode mergeKListsOptimize(ListNode[] lists) {
         List<ListNode> ls = Arrays.asList(lists);
         return mergeKListsOptimize(lists.)
     }
 
     private ListNode merge(ListNode s, ListNode e, int start, int end, ListNode[] lists){
 
-    }
+    }*/
 
     /** recursive solution **/
     public ListNode mergeKLists2(ListNode[] lists) {
