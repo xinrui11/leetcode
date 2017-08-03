@@ -46,14 +46,41 @@ public class MergekSortedLists {
     }
 
     //my solution after optimize
-    /*public ListNode mergeKListsOptimize(ListNode[] lists) {
-        List<ListNode> ls = Arrays.asList(lists);
-        return mergeKListsOptimize(lists.)
+    public ListNode mergeKListsOptimize(ListNode[] lists) {
+        if(lists == null) return null;
+        if(lists.length == 1) return lists[0];
+        return addTwoListNode(lists,0,lists.length-1);
     }
 
-    private ListNode merge(ListNode s, ListNode e, int start, int end, ListNode[] lists){
-
-    }*/
+    private ListNode addTwoListNode(ListNode[] lists,int start,int end){
+        if(start > end) return null;
+        else if(start < end){
+            int half = (start + end)/2;
+            ListNode one = addTwoListNode(lists,start,half);
+            ListNode two = addTwoListNode(lists,half + 1,end);
+            ListNode res = new ListNode(0);
+            ListNode dummy = res;
+            while(one != null && two != null){
+                if(one.val > two.val){
+                    dummy.next = two;
+                    two = two.next;
+                } else{
+                    dummy.next = one;
+                    one = one.next;
+                }
+                dummy = dummy.next;
+            }
+            if(one == null){
+                dummy.next = two;
+            } else {
+                dummy.next = one;
+            }
+            return res.next;
+        }
+        else {
+            return lists[start];
+        }
+    }
 
     /** recursive solution **/
     public ListNode mergeKLists2(ListNode[] lists) {

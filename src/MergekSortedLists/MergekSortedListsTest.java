@@ -28,11 +28,11 @@ public class MergekSortedListsTest extends TestCase {
         p.next = new ListNode(4);
         p.next.next = new ListNode(6);
         ListNode p3 = new ListNode(2);
-        p.next = new ListNode(4);
-        p.next.next = new ListNode(6);
+        p3.next = new ListNode(4);
+        p3.next.next = new ListNode(6);
         ListNode p4 = new ListNode(2);
-        p.next = new ListNode(4);
-        p.next.next = new ListNode(6);
+        p4.next = new ListNode(4);
+        p4.next.next = new ListNode(6);
         ListNode[] lists = new ListNode[]{l,p,p3,p4};
         return lists;
     }
