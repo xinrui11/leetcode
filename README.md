@@ -31,4 +31,5 @@ record my answers to leetcode's questions
 |21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [java](./src/MergeTwoSortedLists/MergeTwoSortedLists.java)|Easy|2017-07-31|
 |22|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [java](./src/GenerateParentheses/GenerateParentheses.java)|Medium|2017-07-31|
 |23|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [java](./src/MergekSortedLists/MergekSortedLists.java)|Hard|2017-08-01|
+|24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [java](./src/SwapNodesinPairs/SwapNodesinPairs.java)|Medium|2017-08-03|
 
