@@ -34,4 +34,5 @@ record my answers to leetcode's questions
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [java](./src/SwapNodesinPairs/SwapNodesinPairs.java)|Medium|2017-08-03|
 |25|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [java](./src/ReverseNodesinkGroup/ReverseNodesinkGroup.java)|Hard|2017-08-04|
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [java](./src/RemoveDuplicatesfromSortedArray/RemoveDuplicatesfromSortedArray.java)|Easy|2017-08-04|
+|27|[Remove Element](https://leetcode.com/problems/remove-element/) | [java](./src/RemoveElement/RemoveElement.java)|Easy|2017-08-04|
 
