@@ -50,10 +50,33 @@ public class ImplementstrStr {
     public int strStr3(String haystack, String needle) {
         for(int i = 0;;i++){
             for(int j = 0;;j++){
-                if(i + j > ){
-
+                //pay attention to the judge order
+                if(j == needle.length()){
+                    return i;
+                }
+                if(i + j >= haystack.length()){
+                    return -1;
+                }
+                if(haystack.charAt(i+j) != needle.charAt(j)){
+                    break;
                 }
             }
         }
+    }
+
+    public int strStr4(String haystack, String needle) {
+        int l1 = haystack.length(), l2 = needle.length();
+        if (l1 < l2) {
+            return -1;
+        } else if (l2 == 0) {
+            return 0;
+        }
+        int threshold = l1 - l2;
+        for (int i = 0; i <= threshold; ++i) {
+            if (haystack.substring(i,i+l2).equals(needle)) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
