@@ -36,5 +36,6 @@ record my answers to leetcode's questions
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [java](./src/RemoveDuplicatesfromSortedArray/RemoveDuplicatesfromSortedArray.java)|Easy|2017-08-04|
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [java](./src/RemoveElement/RemoveElement.java)|Easy|2017-08-04|
 |29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [java](./src/DivideTwoIntegers/DivideTwoIntegers.java)|Medium|2017-08-06|
-|28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [java](./src/ImplementstrStr/ImplementstrStr.java)|Easy|2017-08-06|
+|28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [java](./src/ImplementstrStr/ImplementstrStr.java)|Easy|2017-08-07|
+|30|[Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | [java](./src/SubstringwithConcatenationofAllWords/SubstringwithConcatenationofAllWords.java)|Hard|2017-08-08|
 
