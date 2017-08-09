@@ -36,6 +36,45 @@ public class SubstringwithConcatenationofAllWords {
         return res;
     }
 
+    //my solution after optimize,the way to solve the problem is like before,just use hashmap to replace array
+    public List<Integer> findSubstring4(String s, String[] words) {
+        List<Integer> res = new ArrayList<>();
+        if(s == null || words == null || s.length() == 0 || words.length == 0){
+            return res;
+        }
+        Map<String,Integer> wordsMap = new HashMap<>(words.length);
+        for(String word : words){
+            if(wordsMap.containsKey(word)){
+                wordsMap.put(word, wordsMap.get(word)+1);
+            } else {
+                wordsMap.put(word, 1);
+            }
+        }
+        int step = words[0].length();
+        int length = step*words.length;
+        String temp;
+        for(int i = 0; i <= s.length() - length;i++){
+            Map<String, Integer> copy = new HashMap<>(wordsMap);
+            for(int j = 0;j < words.length;j++){
+                temp = s.substring(i+j*step,i+j*step+step);
+                if(copy.containsKey(temp)){
+                    int count = copy.get(temp);
+                    if(count == 1){
+                        copy.remove(temp);
+                    } else {
+                        copy.put(temp, count - 1);
+                    }
+                    if(copy.isEmpty()){
+                        res.add(i);
+                    }
+                } else {
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+
     /**
      * It's not too hard to find some resemblance between this problem and minimum-window-substring.
      * Actually the main difference is the fact that we are interested at some interval length:
@@ -144,6 +183,87 @@ public class SubstringwithConcatenationofAllWords {
                         break;
                     }
                 } else break; // not in L
+            }
+        }
+        return res;
+    }
+
+    /**
+     * 这道题看似比较复杂，其实思路和Longest Substring Without Repeating Characters差不多。
+     * 因为那些单词是定长的，所以本质上和单一个字符一样。和Longest Substring Without Repeating Characters的区别只在于我们需要维护一个字典，
+     * 然后保证目前的串包含字典里面的单词有且仅有一次。思路仍然是维护一个窗口，如果当前单词在字典中，
+     * 则继续移动窗口右端，否则窗口左端可以跳到字符串下一个单词了。假设源字符串的长度为n，字典中单词的长度为l。
+     * 因为不是一个字符，所以我们需要对源字符串所有长度为l的子串进行判断。做法是i从0到l-1个字符开始，
+     * 得到开始index分别为i, i+l, i+2*l, ...的长度为l的单词。这样就可以保证判断到所有的满足条件的串。
+     * 因为每次扫描的时间复杂度是O(2*n/l)(每个单词不会被访问多于两次，一次是窗口右端，一次是窗口左端)，
+     * 总共扫描l次（i=0, ..., l-1)，所以总复杂度是O(2*n/l*l)=O(n)，是一个线性算法。空间复杂度是字典的大小，即O(m*l)，
+     * 其中m是字典的单词数量。
+     */
+    public List<Integer> findSubstring5(String S, String[] L) {
+        // Note: The Solution object is instantiated only once and is reused by each test case.
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        if(S==null || S.length()==0 || L==null || L.length==0)
+            return res;
+        HashMap<String,Integer> map = new HashMap<String,Integer>();
+        for(int i=0;i<L.length;i++)
+        {
+            if(map.containsKey(L[i]))
+            {
+                map.put(L[i],map.get(L[i])+1);
+            }
+            else
+            {
+                map.put(L[i],1);
+            }
+        }
+        for(int i=0;i<L[0].length();i++)
+        {
+            HashMap<String,Integer> curMap = new HashMap<String,Integer>();
+            int count = 0;
+            int left = i;
+            for(int j=i;j<=S.length()-L[0].length();j+=L[0].length())
+            {
+                String str = S.substring(j,j+L[0].length());
+
+                if(map.containsKey(str))//首先判断是否包含
+                {
+                    if(curMap.containsKey(str))//看其是否已经在之前出现过
+                        curMap.put(str,curMap.get(str)+1);
+                    else
+                        curMap.put(str,1);
+                    if(curMap.get(str)<=map.get(str))
+                        count++;
+                    else//如果次数大于map中的次数，则移动左窗
+                    {
+                        while(curMap.get(str)>map.get(str))
+                        {
+                            String temp = S.substring(left,left+L[0].length());
+                            if(curMap.containsKey(temp))
+                            {
+                                curMap.put(temp,curMap.get(temp)-1);
+                                if(curMap.get(temp)<map.get(temp))
+                                    count--;
+                            }
+                            left += L[0].length();
+                        }
+                    }
+                    if(count == L.length)
+                    {
+                        res.add(left);
+                        //if(left<)
+                        String temp = S.substring(left,left+L[0].length());
+                        //if(curMap.containsKey(temp))//这个判断有必要吗，我认为一定包含（实测没有必要）
+                        curMap.put(temp,curMap.get(temp)-1);
+                        count--;
+                        left += L[0].length();
+                    }
+                }
+                else
+                {
+                    curMap.clear();
+                    count = 0;
+                    left = j+L[0].length();
+                }
             }
         }
         return res;
