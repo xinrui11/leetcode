@@ -39,4 +39,5 @@ record my answers to leetcode's questions
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [java](./src/ImplementstrStr/ImplementstrStr.java)|Easy|2017-08-07|
 |30|[Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | [java](./src/SubstringwithConcatenationofAllWords/SubstringwithConcatenationofAllWords.java)|Hard|2017-08-08|
 |31|[Next Permutation](https://leetcode.com/problems/next-permutation/) | [java](./src/NextPermutation/NextPermutation.java)|Medium|2017-08-09|
+|32|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | [java](./src/LongestValidParentheses/LongestValidParentheses.java)|Hard|2017-08-10|
 

@@ -52,7 +52,7 @@ public class NextPermutation {
         Arrays.sort(nums);
     }
 
-    //Official solution,is similar as mine
+    //Official solution,is similar to mine
     public void nextPermutation2(int[] nums) {
         int i = nums.length - 2;
         while (i >= 0 && nums[i + 1] <= nums[i]) {
