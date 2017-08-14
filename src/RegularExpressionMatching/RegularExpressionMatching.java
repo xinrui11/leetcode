@@ -42,10 +42,8 @@ public class RegularExpressionMatching {
         }
         boolean[][] dp = new boolean[s.length()+1][p.length()+1];
         dp[0][0] = true;
-        for (int i = 0; i < p.length(); i++) {
-            if (p.charAt(i) == '*' && dp[0][i-1]) {
-                dp[0][i+1] = true;
-            }
+        for (int i = 1; i < p.length(); i++) {
+            dp[0][i+1] = p.charAt(i) == '*' && dp[0][i-1];
         }
         for (int i = 0 ; i < s.length(); i++) {
             for (int j = 0; j < p.length(); j++) {
@@ -55,7 +53,7 @@ public class RegularExpressionMatching {
                 if (p.charAt(j) == s.charAt(i)) {
                     dp[i+1][j+1] = dp[i][j];
                 }
-                if (p.charAt(j) == '*') {
+                if (p.charAt(j) == '*' && j-1 >= 0 ) {
                     if (p.charAt(j-1) != s.charAt(i) && p.charAt(j-1) != '.') {
                         dp[i+1][j+1] = dp[i+1][j-1];
                     } else {
@@ -65,5 +63,38 @@ public class RegularExpressionMatching {
             }
         }
         return dp[s.length()][p.length()];
+    }
+
+    //this question is really hard,after a long time to understand,I write my solution below
+    public boolean isMatchMY(String s, String p) {
+        if(s == null || p == null){
+            return false;
+        }
+        int lengths = s.length(),lengthp = p.length();
+        boolean[][] d = new boolean[lengths + 1][lengthp + 1];
+        d[0][0] = true;
+        for(int i = 1; i < lengthp; i++){//match empty
+            d[0][i + 1] = p.charAt(i) == '*' && d[0][i - 1];
+        }
+        char cs,ps;
+        for(int i = 0; i < lengths; i++){
+            cs = s.charAt(i);
+            for(int j = 0; j < lengthp; j++){
+                ps = p.charAt(j);
+                if(ps == '.' || cs == ps){
+                    d[i+1][j+1] = d[i][j];
+                }
+                if(ps == '*' && j - 1 >=0) {
+                    if(p.charAt(j - 1) == '.' || p.charAt(j - 1) == s.charAt(i)){
+                        //this situation is really hard understand,especilly the d[i][j+1],this means match multiple 'a',
+                        //is equals to d[i][j+1] && s[i]==s[i-1] && s[i-1] == p[j-1]
+                        d[i+1][j+1] = d[i+1][j] || d[i][j+1] || d[i+1][j-1];
+                    } else if(p.charAt(j - 1) != s.charAt(i)){
+                        d[i+1][j+1] = d[i+1][j-1];
+                    }
+                }
+            }
+        }
+        return d[lengths][lengthp];
     }
 }
