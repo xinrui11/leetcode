@@ -86,8 +86,6 @@ public class RegularExpressionMatching {
                 }
                 if(ps == '*' && j - 1 >=0) {
                     if(p.charAt(j - 1) == '.' || p.charAt(j - 1) == s.charAt(i)){
-                        //this situation is really hard understand,especilly the d[i][j+1],this means match multiple 'a',
-                        //is equals to d[i][j+1] && s[i]==s[i-1] && s[i-1] == p[j-1]
                         d[i+1][j+1] = d[i+1][j] || d[i][j+1] || d[i+1][j-1];
                     } else if(p.charAt(j - 1) != s.charAt(i)){
                         d[i+1][j+1] = d[i+1][j-1];
