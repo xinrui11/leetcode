@@ -42,4 +42,5 @@ record my answers to leetcode's questions
 |32|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | [java](./src/LongestValidParentheses/LongestValidParentheses.java)|Hard|2017-08-10|
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [java](./src/SearchinRotatedSortedArray/SearchinRotatedSortedArray.java)|Medium|2017-08-11|
 |34|[Search for a Range](https://leetcode.com/problems/search-for-a-range/) | [java](./src/SearchforaRange/SearchforaRange.java)|Medium|2017-08-12|
+|35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [java](./src/SearchInsertPosition/SearchInsertPosition.java)|Easy|2017-08-14|
 
