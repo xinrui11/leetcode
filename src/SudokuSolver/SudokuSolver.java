@@ -55,7 +55,7 @@ public class SudokuSolver {
         return '.';
     }
 
-    //second solution, backtracking
+    //second solution, backtracking, accepted, The time complexity should be 9 ^ m (m represents the number of blanks to be filled in)
     public void solveSudoku2(char[][] board) {
         solve(board);
     }
