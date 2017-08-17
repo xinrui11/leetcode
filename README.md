@@ -45,4 +45,5 @@ record my answers to leetcode's questions
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [java](./src/SearchInsertPosition/SearchInsertPosition.java)|Easy|2017-08-14|
 |36|[Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | [java](./src/ValidSudoku/ValidSudoku.java)|Medium|2017-08-15|
 |37|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | [java](./src/SudokuSolver/SudokuSolver.java)|Hard|2017-08-16|
+|38|[Count and Say](https://leetcode.com/problems/count-and-say/) | [java](./src/CountandSay/CountandSay.java)|Easy|2017-08-17|
 
