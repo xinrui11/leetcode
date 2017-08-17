@@ -47,4 +47,5 @@ record my answers to leetcode's questions
 |37|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | [java](./src/SudokuSolver/SudokuSolver.java)|Hard|2017-08-16|
 |38|[Count and Say](https://leetcode.com/problems/count-and-say/) | [java](./src/CountandSay/CountandSay.java)|Easy|2017-08-17|
 |39|[Combination Sum](https://leetcode.com/problems/combination-sum/) | [java](./src/CombinationSum/CombinationSum.java)|Medium|2017-08-17|
+|40|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [java](./src/CombinationSumII/CombinationSumII.java)|Medium|2017-08-18|
 
