@@ -50,4 +50,5 @@ record my answers to leetcode's questions
 |39|[Combination Sum](https://leetcode.com/problems/combination-sum/) | [java](./src/CombinationSum/CombinationSum.java)|Medium|2017-08-17|
 |40|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | [java](./src/CombinationSumII/CombinationSumII.java)|Medium|2017-08-18|
 |41|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [java](./src/FirstMissingPositive/FirstMissingPositive.java)|Hard|2017-08-18|
+|42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [java](./src/TrappingRainWater/TrappingRainWater.java)|Hard|2017-08-21|
 
