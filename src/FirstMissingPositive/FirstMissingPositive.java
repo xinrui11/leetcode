@@ -11,39 +11,31 @@ package FirstMissingPositive;
  */
 
 public class FirstMissingPositive {
+    //The key here is to use swapping to keep constant space and also make use of the length of the array, which means there can be at most n positive integers.
+    // So each time we encounter an valid integer, find its correct position and swap. Otherwise we continue.
     public int firstMissingPositive(int[] nums) {
         if(nums.length == 0){
             return 1;
         }
-        int res = 0;
-        for(int i = 1; i < nums.length; i++){
-            if(nums[i] < 0){
-                int temp = nums[i - 1];
-                nums[i - 1] = nums[i];
-                nums[i] = temp;
-                if(res == i - 1){
-                    res = i;
-                }
-                continue;
+        int i = 0;
+        //Pass 1, move every value to the position of its value
+        while (i<nums.length){
+            if(nums[i] <= 0 || nums[i] > nums.length || nums[i] == i + 1)
+                i++;
+            else if (nums[nums[i] - 1] != nums[i]){
+                int temp = nums[i];
+                nums[i] = nums[temp - 1];
+                nums[temp - 1] = temp;
             } else {
-                if(nums[i]<nums[i - 1]){
-                    if(nums[i - 1] - nums[i] == 1){
-                        int temp = nums[i - 1];
-                        nums[i - 1] = nums[i];
-                        nums[i] = temp;
-                        res = i;
-                    } else {
-                        res = i - 1;
-                    }
-                } else {
-                    if(nums[i] - nums[i - 1] == 1){
-                        res = i;
-                    } else {
-                        res = i - 1;
-                    }
-                }
+                i++;
             }
         }
-        return nums[res] + 1;
+        i = 0;
+        //Pass 2, find first location where the index doesn't match the value
+        while(i<nums.length && i + 1 == nums[i]){
+            i++;
+        }
+        return i+1;
     }
+
 }
