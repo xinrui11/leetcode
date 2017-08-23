@@ -45,7 +45,29 @@ public class TrappingRainWater {
         return res;
     }
 
-    /*public int trapDP(int[] height) {
+    public int trapDP(int[] height) {
+        if(height == null || height.length < 2){
+            return 0;
+        }
+        int len = height.length;
+        int[] maxLeft = new int[len];
+        maxLeft[0] = height[0];
+        for(int i = 1; i<len; i++){
+            maxLeft[i] = Math.max(maxLeft[i-1],height[i]);
+        }
+        int[] maxRight = new int[len];
+        maxRight[len-1] = height[len-1];
+        for(int i = len - 2;i>=0;i--){
+            maxRight[i] = Math.max(maxRight[i+1],height[i]);
+        }
+        int res = 0;
+        for(int i = 1; i<height.length;i++){
+            int min = Math.min(maxLeft[i],maxRight[i]);
+            if(min > height[i]){//this is useless,It doesn't make any sense
+                res = res + min - height[i];
+            }
+        }
+        return res;
+    }
 
-    }*/
 }
