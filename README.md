@@ -52,4 +52,5 @@ record my answers to leetcode's questions
 |41|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [java](./src/FirstMissingPositive/FirstMissingPositive.java)|Hard|2017-08-18|
 |42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [java](./src/TrappingRainWater/TrappingRainWater.java)|Hard|2017-08-21|
 |43|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [java](./src/MultiplyStrings/MultiplyStrings.java)|Medium|2017-08-23|
+|44|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | [java](./src/WildcardMatching/WildcardMatching.java)|Hard|2017-08-28|
 
