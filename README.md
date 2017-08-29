@@ -54,4 +54,5 @@ record my answers to leetcode's questions
 |43|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [java](./src/MultiplyStrings/MultiplyStrings.java)|Medium|2017-08-23|
 |44|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | [java](./src/WildcardMatching/WildcardMatching.java)|Hard|2017-08-28|
 |45|[Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [java](./src/JumpGameII/JumpGameII.java)|Hard|2017-08-29|
+|46|[Permutations](https://leetcode.com/problems/permutations/) | [java](./src/Permutations/Permutations.java)|Medium|2017-08-30|
 
