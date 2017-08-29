@@ -53,4 +53,5 @@ record my answers to leetcode's questions
 |42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [java](./src/TrappingRainWater/TrappingRainWater.java)|Hard|2017-08-21|
 |43|[Multiply Strings](https://leetcode.com/problems/multiply-strings/) | [java](./src/MultiplyStrings/MultiplyStrings.java)|Medium|2017-08-23|
 |44|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | [java](./src/WildcardMatching/WildcardMatching.java)|Hard|2017-08-28|
+|45|[Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [java](./src/JumpGameII/JumpGameII.java)|Hard|2017-08-29|
 
