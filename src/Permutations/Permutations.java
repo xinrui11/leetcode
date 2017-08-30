@@ -71,7 +71,6 @@ public class Permutations {
     }
 
     //a AC solution
-
     /**
      * the basic idea is, to permute n numbers, we can add the nth number into the resulting List<List<Integer>> from the n-1 numbers, in every possible position.
 
