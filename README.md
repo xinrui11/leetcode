@@ -56,4 +56,5 @@ record my answers to leetcode's questions
 |45|[Jump Game II](https://leetcode.com/problems/jump-game-ii/) | [java](./src/JumpGameII/JumpGameII.java)|Hard|2017-08-29|
 |46|[Permutations](https://leetcode.com/problems/permutations/) | [java](./src/Permutations/Permutations.java)|Medium|2017-08-30|
 |47|[Permutations II](https://leetcode.com/problems/permutations-ii/) | [java](./src/PermutationsII/PermutationsII.java)|Medium|2017-08-31|
+|48|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [java](./src/RotateImage/RotateImage.java)|Medium|2017-09-01|
 
