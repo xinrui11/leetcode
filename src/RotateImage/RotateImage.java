@@ -1,5 +1,8 @@
 package RotateImage;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *You are given an n x n 2D matrix representing an image.
 
@@ -44,22 +47,37 @@ package RotateImage;
  */
 
 public class RotateImage {
+    //this my solution,but it's accepted,only beats 2%
+    //main idea is exchange directly
     public void rotate(int[][] matrix) {
         if(matrix == null || matrix.length ==0 || matrix[0] == null || matrix[0].length == 0){
             return;
         }
-        int height = matrix.length,half = height/2;
+        int height = matrix.length;
+        int allcount = 0,alllength = height*height;
+        Map<String,Boolean> map = new HashMap<>();
         for(int i = 0; i < height; i++){
             for(int j = 0; j < height; j++){
-                if(i == half && j == half)
+                if(map.get(i+","+j) != null)
+                    continue;
+                allcount = exchange(height,i,j,matrix,allcount,map);
+                if(alllength == allcount)
                     break;
-                int x = j,y = height - 1 - i;
-                int temp = matrix[x][y];//this is wrong
-                matrix[x][y] = matrix[i][j];
-                matrix[i][j] = temp;
             }
-            if(i == half)
+            if(alllength == allcount)
                 break;
         }
+    }
+
+    private int exchange(int height, int i, int j, int[][] matrix,int allcount,Map<String,Boolean> map){
+        int y = height - 1 - i;
+        if(map.get(j+","+y) == null){
+            int temp = matrix[i][j];
+            map.put(j+","+y,true);
+            allcount = exchange(height,j,y,matrix,allcount,map);
+            matrix[j][y] = temp;
+            return allcount + 1;
+        }
+        return allcount;
     }
 }
