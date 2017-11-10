@@ -1,6 +1,47 @@
 package AddTwoNumbers;
 
+/**
+ You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+ You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+ Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+ Output: 7 -> 0 -> 8
+
+ 中文：给出两个表示两个非负整数的非空链表。数字以相反的顺序存储，它们的每个节点都包含一个数字。相加对应的两个数字，并将其作为链表返回。
+ 你可以假设这两个数字不包含任何前导零，除了第0个数字本身。
+ */
 public class AddTwoNumbers {
+    public ListNode addTwoNumbersMySolution(ListNode l1, ListNode l2) {
+        ListNode res = new ListNode(0);
+        ListNode tail = res;
+        boolean flag = false;
+        while(l1 != null || l2 != null){
+            int val = 0;
+            if(l1 != null){
+                val = val + l1.val;
+                l1 = l1.next;
+            }
+            if(l2 != null){
+                val = val + l2.val;
+                l2 = l2.next;
+            }
+            if(flag){
+                val++;
+                flag = false;
+            }
+            if(val > 9){
+                val = val - 10;
+                flag = true;
+            }
+            tail.next = new ListNode(val);
+            tail = tail.next;
+        }
+        if(flag){
+            tail.next = new ListNode(1);
+        }
+        return res.next;
+    }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result;
