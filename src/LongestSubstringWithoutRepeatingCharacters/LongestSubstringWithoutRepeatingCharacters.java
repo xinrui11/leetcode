@@ -17,22 +17,22 @@ import java.util.Set;
  * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
 public class LongestSubstringWithoutRepeatingCharacters {
-    public int lengthOfLongestSubstring(String s) {
-        int answer = 0;
-        String temp = "";
-        int start, end = 1;
-        for(int i = 0; i < s.length(); i++){
-            start = i;//start前移，中间的字段肯定不重复
-            temp = s.substring(start, end);
-            while(end + 1 <= s.length() && !temp.contains(s.substring(end, end + 1))){
-                end++;
-                temp = s.substring(start, end);
-            }
-            if(answer < temp.length()){
-                answer = temp.length();
+    public int lengthOfLongestSubstringMySolution(String s) {
+        if(s.length() <= 1)
+            return s.length();
+        int res = 1;
+        for(int i = 0, j = 1; j < s.length(); ){
+            String sub = s.substring(i,j);
+            if(!sub.contains(s.substring(j,j+1))){
+                j = j + 1;
+                if(res < j - i){
+                    res = j - i;
+                }
+            } else {
+                i = i + 1;
             }
         }
-        return answer;
+        return res;
     }
 
     /*----------------------以下为官方解法-----------------------*/
