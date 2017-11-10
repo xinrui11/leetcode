@@ -16,6 +16,8 @@ import java.util.Map;
 
 /**
  * 2017-06-29
+ * 这道题目的关键是You may assume that each input would have exactly one solution
+ * 你可以假设每个输入都有且仅有一组解
  */
 public class TwoSum {
     /**
