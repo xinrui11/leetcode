@@ -73,6 +73,7 @@ public class LongestPalindromicSubstring {
             return s;
         }
         String longest = new String();
+        //注意这里有两种情况，一种是中心为单字母，二是中心为双字母
         for(int i = 0; i < s.length() - 1; i++){
             String temp = centerExpand(s,i,i+1);
             if(longest.length()<temp.length())
