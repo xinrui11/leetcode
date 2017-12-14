@@ -19,7 +19,7 @@ import java.util.List;
  */
 
 public class ThreeSum {
-    //even thought this is corrent,but it could be Time Limit Exceeded
+    //Although this is a correct answer,it could be Time Limit Exceeded
     public List<List<Integer>> threeSum(int[] nums) {
         if(nums == null || nums.length < 3) return new ArrayList();
         Arrays.sort(nums);
