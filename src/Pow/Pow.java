@@ -39,11 +39,15 @@ public class Pow {
 
     //二分解法
     public double myPowBinary(double x, int n) {
+        if(x == 0)
+            return 0;
+        if(x == 1)
+            return 1;
         if(n == 0){
             return 1;
         }
         if(n < 0){
-            return myPowBinary(1/x,-n);
+            return 1/x*myPowBinary(1/x,-(n+1));//n+1再取反，防止-2147483648直接取反溢出
         }
         else {
             if(n%2 == 0)
@@ -69,6 +73,10 @@ public class Pow {
         System.out.println("output is:" + p.myPow(x,n));
         System.out.println("Binary output is:" + p.myPowBinary(x,n));
         x = 2;n = -9;
+        System.out.println("input is:"+"("+x + "," + n +")");
+        System.out.println("output is:" + p.myPow(x,n));
+        System.out.println("Binary output is:" + p.myPowBinary(x,n));
+        x = 2;n = -2147483648;
         System.out.println("input is:"+"("+x + "," + n +")");
         System.out.println("output is:" + p.myPow(x,n));
         System.out.println("Binary output is:" + p.myPowBinary(x,n));

@@ -8,6 +8,8 @@ record my answers to leetcode's questions
 
 "*" means the question is not solved
 
+My leetcode profile website is https://leetcode.com/xinrui-_-/.
+
 | # | Title | Solution | Difficulty |Solve Time|
 |---| ----- | -------- | ---------- |---|
 |1|[Two Sum](https://leetcode.com/problems/two-sum) | [java](./src/TwoSum/TwoSum.java)|Easy|2017-06-30|
