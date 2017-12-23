@@ -59,4 +59,5 @@ record my answers to leetcode's questions
 |47|[Permutations II](https://leetcode.com/problems/permutations-ii/) | [java](./src/PermutationsII/PermutationsII.java)|Medium|2017-08-31|
 |48|[Rotate Image](https://leetcode.com/problems/rotate-image/) | [java](./src/RotateImage/RotateImage.java)|Medium|2017-09-01|
 |49|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [java](./src/GroupAnagrams/GroupAnagrams.java)|Medium|2017-09-08|
+|50|[Pow(x, n)](https://leetcode.com/problems/powx-n/description/) | [java](./src/Pow/Pow.java)|Medium|2017-12-23|
 
