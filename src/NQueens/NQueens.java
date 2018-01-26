@@ -36,7 +36,7 @@ public class NQueens {
     }
 
     //My first solution,accepted,only beats 6.99% java submissions.
-    //第一种解法，虽然通过了但是至击败了6.99%的java解法，直接使用List<String>代替解法，所以一种解法的List长度是N*N,
+    //第一种解法，虽然通过了但是只击败了6.99%的java解法，直接使用List<String>代替解法，所以一种解法的List长度是N*N,
     //回溯上不是很复杂，但是判断函数略显复杂
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> result = new ArrayList<>();
