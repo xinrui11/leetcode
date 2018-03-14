@@ -64,4 +64,5 @@ My leetcode profile website is https://leetcode.com/xinrui-_-/.
 |50|[Pow(x, n)](https://leetcode.com/problems/powx-n/description/) | [java](./src/Pow/Pow.java)|Medium|2017-12-23|
 |51|[N-Queens](https://leetcode.com/problems/n-queens/description/) | [java](./src/NQueens/NQueens.java)|Hard|2018-01-09|
 |52|[N-Queens II*](https://leetcode.com/problems/n-queens-ii/description/) | [java](./src/NQueensII/NQueensII.java)|Hard|2018-01-26|
+|52|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) | [java](./src/MaximumSubarray/MaximumSubarray.java)|Easy|2018-03-14|
 
